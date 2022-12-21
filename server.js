@@ -1,18 +1,35 @@
 // firstly we will create the express server
 // for that we will first have to import the express module
 
+//1.
 const express = require('express')
 const app = express()
 
+//4.
+//Configuring the template engine
+const ejs = require('ejs')
+const path = require('path')
+const expressLayout = require('express-ejs-layouts')
+const PORT = process.env.PORT || 3000
 //here app and express are random variables
 // app is variable
 // express is the function used
 
+//3.
 app.get('/', (req, res) => {
-    res.send('Hello From Server')
+    // res.send('Hello From Server')
+    res.render('home')
+    // res.render('Hello from server')
+    //we have set the path to render for the express in the app.set
+    //we can simply render the file in that location
 })
 
-const PORT = process.env.PORT || 3000
+
+//set template engine
+app.use(expressLayout)
+app.set('views', path.join(__dirname, '/resources/views'))
+app.set('view engine', 'ejs')
+
 
 //process.env is outside the app
 
@@ -20,6 +37,7 @@ const PORT = process.env.PORT || 3000
 // if it has the variable PORT it will run on that port
 // otherwise it will run on port 3000
 
+//2.
 app.listen(PORT, () => {
 
     // it will always print the same line
