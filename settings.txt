@@ -1,0 +1,30 @@
+{
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "editor.fontSize": 15,
+    "editor.minimap.enabled": false,
+    "workbench.sideBar.location": "right",
+    "editor.mouseWheelZoom": true,
+    "editor.bracketPairColorization.enabled": true,
+    "code-runner.saveAllFilesBeforeRun": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "tabnine.experimentalAutoImports": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "security.workspace.trust.untrustedFiles": "newWindow",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "files.autoSave": "afterDelay",
+    "update.mode": "manual",
+    "material-icon-theme.showUpdateMessage": true,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.associations": {
+        "*.rmd": "markdown"
+    },
+    "liveServer.settings.donotVerifyTags": true,
+    "[python]": {
+    },
+    "window.zoomLevel": -1
+}
