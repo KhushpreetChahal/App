@@ -4,6 +4,10 @@
   "description": "This is a realtime pizza app",
   "main": "index.js",
   "author": "Manpreet Singh",
+  "scripts":{
+    "dev": "nodemon server.js",
+    "serve": "node server.js"
+  },
   "license": "MIT",
   "dependencies": {
     "ejs": "^3.1.8",
@@ -13,4 +17,5 @@
   "devDependencies": {
     "nodemon": "^2.0.20"
   }
+
 }
