@@ -1,0 +1,8 @@
+{
+  "name": "realtime-pizza",
+  "version": "1.0.0",
+  "description": "This is a realtime pizza app",
+  "main": "index.js",
+  "author": "Manpreet Singh",
+  "license": "MIT"
+}
