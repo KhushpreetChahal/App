@@ -1,1 +1,25 @@
- 
+ Creating the directory structure
+Create a NPM project(using the yarn project) and create all dependencies
+    -Dependencies
+        -Express
+        -ejs express-ejs-layouts (ejs is the template engine that we are using here)
+    -Dev Dependancies
+        -nodemon 
+        // devdependancy means that the package would be used only for local purpose
+        // but we will not use it when we will use it for production
+
+
+Create Express Server - Create a server.js file(in the root folder)
+server.js is the file from we will run our code
+
+Create Home page using HTML and CSS
+    - include tailwind CSS
+
+Create Cart page
+    -order summary section
+    -empty cart section
+
+Create Order controller and link it in server.js file
+Create orders view with table for customer and admin
+Create orders single page with status 
+Create login page with route

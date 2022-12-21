@@ -1,0 +1,7 @@
+// This will contain all the CSS and Scss
+
+
+// And the tool that we will use afterwards will compile all the .js files and .scss files 
+// and save them is the .js and .css in the public directory
+
+// And these compiled files will be included in the index file

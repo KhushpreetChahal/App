@@ -1,0 +1,15 @@
+Making the directory structure
+We will install the yarn package in it
+Initialize the yarn package using the command "yarn init"
+It will ask some question to the user
+In order to skip the questions we can use the command "yarn init -y" or "yarn init -yes"
+
+Here yarn is used to create the .json file which otherwise we had to create manually
+
+If we are using NPM we simply need to type the command "npm init"
+
+yarn.lock file is used to keep the enteries of version of the dependencies 
+If we are using NPM we will get the entry as package-json.lock
+
+
+

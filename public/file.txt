@@ -1,0 +1,5 @@
+In the public Folder we will keep all the public assets
+Like our CSS file that we can access on the client site
+Also the javascript file
+And the images on the site
+And also maybe the fonts 
