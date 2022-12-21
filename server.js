@@ -15,6 +15,12 @@ const PORT = process.env.PORT || 3000
 // app is variable
 // express is the function used
 
+
+//Assets
+app.use(express.static('public'))
+//this will set the public folder as a whole for the designing purpose
+
+
 //3.
 app.get('/', (req, res) => {
     // res.send('Hello From Server')
