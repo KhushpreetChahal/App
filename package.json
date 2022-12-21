@@ -4,18 +4,25 @@
   "description": "This is a realtime pizza app",
   "main": "index.js",
   "author": "Manpreet Singh",
-  "scripts":{
+  "scripts": {
     "dev": "nodemon server.js",
-    "serve": "node server.js"
+    "serve": "node server.js",
+    "development": "mix",
+    "watch": "mix watch",
+    "production": "mix --production"
   },
   "license": "MIT",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "laravel-mix": "^6.0.49",
+    "nodemon": "^2.0.20",
+    "resolve-url-loader": "5.0.0",
+    "sass": "^1.57.1",
+    "sass-loader": "12.1.0"
   }
-
 }
