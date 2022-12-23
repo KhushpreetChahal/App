@@ -50,6 +50,15 @@ app.get('/cart', (req, res) => {
 // if it has the variable PORT it will run on that port
 // otherwise it will run on port 3000
 
+
+app.get('/login', (req, res) => {
+    res.render('auth/login')
+})
+app.get('/register', (req, res) => {
+    res.render('auth/register')
+})
+
+
 //2.
 app.listen(PORT, () => {
 
