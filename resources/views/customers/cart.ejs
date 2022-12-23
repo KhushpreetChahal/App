@@ -1,5 +1,69 @@
-<section class="cart">
-  <div class="empty-cart py-4">
+<section class="cart py-16">
+  <div class="order container mx-auto w-1/2">
+    <!--this div is called the wrapper -->
+    <!-- <div class="flex items-center border-b border-gray-300 pb-4"> -->
+    <div class="flex items-center border-b-4 border-gray-100 rounded pb-4">
+      <!--this div contains text and image so we will use flex -->
+      <img src="/img/cart.png" alt="Cart" />
+      <h1 class="font-bold ml-4 text-2xl">Order Summary</h1>
+      <!-- <hr class="h-1 bg-gray-100 rounded">  -->
+    </div>
+    <div class="pizza-list">
+      <div class="flex items-center my-8">
+        <img class="w-24" src="/img/pizza.png" alt="pizza" />
+        <div class="flex-1 ml-4">
+          <h1>Marinara</h1>
+          <span>MEDIUM</span>
+        </div>
+        <span class="flex-1">1 Pcs</span>
+        <!-- flex-1 is used to push the element on the right to the rightmost corner -->
+        <!-- and distribute the remaining space 50-50 -->
+        <span class="font-bold text-lg">₹300</span>
+      </div>
+      <div class="flex items-center my-8">
+        <img class="w-24" src="/img/pizza.png" alt="pizza" />
+        <div class="flex-1 ml-4">
+          <h1>Marinara</h1>
+          <span>MEDIUM</span>
+        </div>
+        <span class="flex-1">1 Pcs</span>
+        <!-- flex-1 is used to push the element on the right to the rightmost corner -->
+        <!-- and distribute the remaining space 50-50 -->
+        <span class="font-bold text-lg">₹300</span>
+      </div>
+      <div class="flex items-center my-8">
+        <img class="w-24" src="/img/pizza.png" alt="pizza" />
+        <div class="flex-1 ml-4">
+          <h1>Marinara</h1>
+          <span>MEDIUM</span>
+        </div>
+        <span class="flex-1">1 Pcs</span>
+        <!-- flex-1 is used to push the element on the right to the rightmost corner -->
+        <!-- and distribute the remaining space 50-50 -->
+        <span class="font-bold text-lg">₹300</span>
+      </div>
+      <hr class="h-1 bg-gray-100 rounded">
+      <div class="text-right py-4">
+        <div>
+          <span class="text-lg font-bold">Total Amount:</span>
+          <span class="amount text-2xl font-bold ml-2">₹300</span>
+        </div>
+        <div>
+          <form action="" class="mt-8">
+            <input class="border border-gray-400 p-2 w-1/2 mb-4" type="text" placeholder="Phone Number">
+            <input class="border border-gray-400 p-2 w-1/2" type="text" placeholder="Address">
+            <div>
+              <!-- <button class="btn-primary px-6 py-2 rounded-full text-black font-bold mt-6" type="submit">Order Now</button> -->
+              <!-- we have kept the button under div, becuase div is a block element so the button will appear in the next line -->
+            </div>
+          </form>
+        </div>
+        <a href="" class="inline-block cursor-pointer px-6 btn-primary py-2 rounded-full text-black font-bold mt-6">Login to Continue</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="empty-cart py-4">
     <div class="container mx-auto text-center">
       <h1 class="text-3xl font-bold mb-2">Cart Empty 😞</h1>
       <p class="text-gray-500 text-lg mb-12">
@@ -13,6 +77,5 @@
         >Go Back</a
       >
     </div>
-  </div>
-  
+  </div> -->
 </section>

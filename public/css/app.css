@@ -52,3 +52,6 @@ nav {
 section.cart {
   background: #f6ebeb;
 }
+section.cart .amount {
+  color: #FE5F1E;
+}
