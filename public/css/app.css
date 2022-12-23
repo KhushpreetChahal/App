@@ -48,3 +48,7 @@ nav {
 .btn-primary:hover {
   background: #b23301;
 }
+
+section.cart {
+  background: #f6ebeb;
+}

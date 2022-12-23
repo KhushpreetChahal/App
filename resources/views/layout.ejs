@@ -1,0 +1,82 @@
+<!-- here we will keep the code that repeats again and again on our website -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/app.css" />
+    <!-- <link rel="icon" href="/img/favicon.png" type="image/png"> -->
+    <!-- <link rel="icon" href="/img/favicon.ico" type="image/ico"> -->
+
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#00a300" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <nav class="container mx-auto flex items-center justify-between px-8 py-2">
+      <!-- the class container is by default a pre defined class of tailwind css which is used to put the objects defined into a container -->
+      <!-- mx-auto is used to center the contents of the container -->
+      <!-- flex items-centre is used to align the items in a vertical center fashion -->
+      <!-- justify-between is used to push the items to the right -->
+
+      <div>
+        <img src="/img/logo.png" alt="logo" />
+      </div>
+      <div>
+        <ul class="flex items-center">
+          <!-- this class is used to bring all the items in one line and center -->
+
+          <li class="ml-6"><a href="#">Menu</a></li>
+          <li class="ml-6"><a href="#">Offers</a></li>
+          <li class="ml-6"><a href="#">Register</a></li>
+          <li class="ml-6"><a href="#">Login</a></li>
+          <li class="ml-6">
+            <a href="#" class="inline-block px-4 py-2 rounded-full"
+              ><img src="/img/cart.png" alt=""
+            /></a>
+          </li>
+          <!-- ml-6 is also a bulit in class in tailwind css to give the spacing between items -->
+          <!-- by default the element in inline, we need to convert it to inline block -->
+          <!-- for that we use the predefined tailwind class inline block-->
+          <!-- For giving padding we can use px and py, px is for horizontal padding and py for vertical padding -->
+        </ul>
+      </div>
+    </nav>
+    <%- body %>
+    <script src="/js/app.js"></script>
+  </body>
+</html>

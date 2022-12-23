@@ -21,6 +21,14 @@ app.use(express.static('public'))
 //this will set the public folder as a whole for the designing purpose
 
 
+//set template engine
+app.use(expressLayout)
+app.set('views', path.join(__dirname, '/resources/views'))
+app.set('view engine', 'ejs')
+
+
+//routes should always be after the expressLayout setting
+
 //3.
 app.get('/', (req, res) => {
     // res.send('Hello From Server')
@@ -31,11 +39,10 @@ app.get('/', (req, res) => {
 })
 
 
-//set template engine
-app.use(expressLayout)
-app.set('views', path.join(__dirname, '/resources/views'))
-app.set('view engine', 'ejs')
-
+app.get('/cart', (req, res) => {
+    res.render('customers/cart')
+})
+//this will render the cart page
 
 //process.env is outside the app
 
