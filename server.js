@@ -21,9 +21,8 @@ const mongoose = require("mongoose");
 
 //snippet for connection to MongoDB that we use every time
 
-const url = 'mongodb://localhost/pizza';
-mongoose.connect(url)
-  .then(() => console.log('Connected!'));
+const url = "mongodb://localhost/pizza";
+mongoose.connect(url).then(() => console.log("Connected!"));
 // mongoose.connect(url, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: true });
 // const connection = mongoose.connection;
 // connection.once('open', () => {
