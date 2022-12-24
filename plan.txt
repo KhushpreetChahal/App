@@ -1,25 +1,43 @@
- Creating the directory structure
-Create a NPM project(using the yarn project) and create all dependencies
-    -Dependencies
-        -Express
-        -ejs express-ejs-layouts (ejs is the template engine that we are using here)
-    -Dev Dependancies
-        -nodemon 
-        // devdependancy means that the package would be used only for local purpose
-        // but we will not use it when we will use it for production
+Create Directory Structure
+Create a NPM project(using the yarn project) and install all dependencies
+    -->Dependancies
+        ----Express
+        ----ejs express-ejs-layouts (ejs is the template engine that we are using here)
+    -->Dev Dependancies
+        ----nodemon 
+            ---dev-dependancy means that the package would be used only for local purpose
+            ---but we will not use it when we will use it for production
 
 
 Create Express Server - Create a server.js file(in the root folder)
-server.js is the file from we will run our code
+                      ----server.js is the file from we will run our code
+
+Git Setup and First Commit
+Install Laravel Mix
+    ---setup js and scss
+
+Install Tailwind CSS
 
 Create Home page using HTML and CSS
-    - include tailwind CSS
+    ---include tailwind CSS
 
 Create Cart page
-    -order summary section
-    -empty cart section
+    ---order summary section
+    ---empty cart section
+    ---move routes to routes file
+        (now the routes are in the server file, we need to move then to the route file otherwise the size of the server file will become very large and it would be difficult to handle the file)
+    ---Create dedicated controllers
+
+Add to cart functionality
+    ---Connect to MongoDB
+    ---Use connect-mongo for session store
+        ---Dependancies
+            ---mongoose, express-section, connect-mongo, dotenv
+    ---axios to send ajax request
+    ---install notification library npm i noty https://ned.im/noty/#/
 
 Create Order controller and link it in server.js file
 Create orders view with table for customer and admin
 Create orders single page with status 
 Create login page with route
+Create register page with route

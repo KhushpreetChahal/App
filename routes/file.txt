@@ -1,1 +1,8 @@
 by route we mean the URL that we use to access the page
+
+we will include the menu.json file in the database using the mongoDB Compass
+
+for that we need to install the tool mongoose 
+we can install it using the command "yarn add mongoose"
+
+using the mongoose we can interact easily with the mongoDB
