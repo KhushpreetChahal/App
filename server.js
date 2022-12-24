@@ -29,7 +29,7 @@ mongoose.connect(url).then(() => console.log("Connected!"));
 //   console.log('Database connected...');
 // }).catch(err => {
 //   console.log('Connection failed...')
-// });
+// }); 
 
 //Assets
 app.use(express.static("public"));
