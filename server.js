@@ -2,6 +2,7 @@
 // for that we will first have to import the express module
 
 //1.
+require('dotenv').config()    //here config is method and we are calling
 const express = require("express");
 const app = express();
 
@@ -15,21 +16,48 @@ const PORT = process.env.PORT || 3000;
 // app is variable
 // express is the function used
 
-const mongoose = require("mongoose");
+//session
+const session=require('express-session')
+
+const mongoose = require('mongoose');
+const { Store } = require('express-session');
+const flash = require('express-flash')
+const MongoDbStore = require('connect-mongo')(session)
+
 
 //Database Connection
 
 //snippet for connection to MongoDB that we use every time
+const url = "mongodb://0.0.0.0:27017/pizza";
 
-const url = "mongodb://localhost/pizza";
 mongoose.connect(url).then(() => console.log("Connected!"));
 // mongoose.connect(url, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: true });
-// const connection = mongoose.connection;
+ const connection = mongoose.connection;
 // connection.once('open', () => {
 //   console.log('Database connected...');
 // }).catch(err => {
 //   console.log('Connection failed...')
-// }); 
+// });
+
+
+//session store
+let mongoStore=new MongoDbStore({
+  mongooseConnection: connection,
+  collection:'sessions'
+})
+
+//session confi
+app.use(flash())
+app.use(session({
+  secret: 'thisismysecret'||
+  process.env.COOKIE_SECRET,
+  resave: false,
+  saveUninitialized: false,
+ store: mongoStore,
+
+  cookie:{maxAge:1000*60*60*24}   //lifetime 24hrs 
+}))
+
 
 //Assets
 app.use(express.static("public"));
