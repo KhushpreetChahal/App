@@ -10,7 +10,7 @@ function homeController() {
     async index(req, res) {
       //Menu.find().then(function (pizzas) {
       const pizzas = await Menu.find()
-      console.log(pizzas)
+      // console.log(pizzas)
         // find method is used to fetch all the data
         //then executes when data is received
         return res.render("home", { pizzas: pizzas });

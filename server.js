@@ -62,7 +62,7 @@ app.use(session({
 //Assets
 app.use(express.static("public"));
 //this will set the public folder as a whole for the designing purpose
-
+app.use(express.json())
 //set template engine
 app.use(expressLayout);
 app.set("views", path.join(__dirname, "/resources/views"));
