@@ -1,4 +1,5 @@
 <section class="cart py-16">
+    <% if(session.cart) {%>
   <div class="order container mx-auto w-1/2">
     <!--this div is called the wrapper -->
     <!-- <div class="flex items-center border-b border-gray-300 pb-4"> -->
@@ -9,44 +10,32 @@
       <!-- <hr class="h-1 bg-gray-100 rounded">  -->
     </div>
     <div class="pizza-list">
+     
+
+
+     <!--for of loop used and objects are converted to array-->
+     <%for(let pizza of Object.values(session.cart.items) )  { %>
+     
       <div class="flex items-center my-8">
-        <img class="w-24" src="/img/pizza.png" alt="pizza" />
+        <img class="w-24" src="/img/<%=pizza.item.image%>" alt="pizza" />
         <div class="flex-1 ml-4">
-          <h1>Marinara</h1>
-          <span>MEDIUM</span>
+          <h1><%=pizza.item.name%></h1>
+          <span><%=pizza.item.size%></span>
         </div>
-        <span class="flex-1">1 Pcs</span>
+        <span class="flex-1"><%=pizza.qty%></span>
         <!-- flex-1 is used to push the element on the right to the rightmost corner -->
         <!-- and distribute the remaining space 50-50 -->
-        <span class="font-bold text-lg">₹300</span>
+        <span class="font-bold text-lg">₹<%=pizza.item.price *pizza.qty %></span>
       </div>
-      <div class="flex items-center my-8">
-        <img class="w-24" src="/img/pizza.png" alt="pizza" />
-        <div class="flex-1 ml-4">
-          <h1>Marinara</h1>
-          <span>MEDIUM</span>
-        </div>
-        <span class="flex-1">1 Pcs</span>
-        <!-- flex-1 is used to push the element on the right to the rightmost corner -->
-        <!-- and distribute the remaining space 50-50 -->
-        <span class="font-bold text-lg">₹300</span>
-      </div>
-      <div class="flex items-center my-8">
-        <img class="w-24" src="/img/pizza.png" alt="pizza" />
-        <div class="flex-1 ml-4">
-          <h1>Marinara</h1>
-          <span>MEDIUM</span>
-        </div>
-        <span class="flex-1">1 Pcs</span>
-        <!-- flex-1 is used to push the element on the right to the rightmost corner -->
-        <!-- and distribute the remaining space 50-50 -->
-        <span class="font-bold text-lg">₹300</span>
-      </div>
+     <%} %>
+    </div>
+
+
       <hr class="h-1 bg-gray-100 rounded">
       <div class="text-right py-4">
         <div>
           <span class="text-lg font-bold">Total Amount:</span>
-          <span class="amount text-2xl font-bold ml-2">₹300</span>
+          <span class="amount text-2xl font-bold ml-2">₹<%= session.cart.totalPrice%></span>
         </div>
         <div>
           <form action="" class="mt-8">
@@ -63,7 +52,9 @@
     </div>
   </div>
 
-  <!-- <div class="empty-cart py-4">
+<%} else{%>
+
+  <div class="empty-cart py-4">
     <div class="container mx-auto text-center">
       <h1 class="text-3xl font-bold mb-2">Cart Empty 😞</h1>
       <p class="text-gray-500 text-lg mb-12">
@@ -77,5 +68,6 @@
         >Go Back</a
       >
     </div>
-  </div> -->
+  </div>
+  <%}%>
 </section>

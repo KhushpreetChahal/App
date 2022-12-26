@@ -66,7 +66,7 @@
           <li class="ml-6"><a href="/login">Login</a></li>
           <li class="ml-6">
             <a href="/cart" class="inline-block px-6 py-2 rounded-full flex items-center" >
-              <span id="classCounter" class="text-white font-bol pr-2">0</span>  
+              <span id="cartCounter" class="text-white font-bol pr-2"><%=session.cart?  session.cart.totalQty:''%></span>  
               <img src="/img/cart.png" alt=""
             /></a>
           </li>
